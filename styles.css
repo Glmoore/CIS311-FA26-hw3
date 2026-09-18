@@ -1,0 +1,23 @@
+:root {
+    --green200: hsl(148, 38%, 91%);
+    --green600: hsl(169, 82%, 27%);
+    --red: hsl(0, 66%, 54%);
+}
+
+body {
+    font-family: [Karla](https://fonts.google.com/specimen/Karla)
+}
+
+#toast{
+    position: fixed;
+    /* inset: 1.5rem auto auto auto; */
+    top: 2rem;
+  
+    margin: 0;
+    padding: 0.75rem 1.25rem;
+    border: none;
+    background-color: green;
+    color: white;
+
+
+}

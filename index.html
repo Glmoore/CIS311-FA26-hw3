@@ -18,30 +18,39 @@
 </head>
 <body>
 
-  Contact Us
+  <h1>Contact Us</h1>
 
-  First Name
-  This field is required
+  <form>
+    
+    <div id="name">
+      <h4>First Name</h4>
+      This field is required
 
-  Last Name
-  This field is required
+      <h4>Last Name</h4>
+      This field is required
+    </div>
 
-  Email Address
-  Please enter a valid email address
-  This field is required
+    <h4>Email Address</h4>
+    Please enter a valid email address
+    This field is required
 
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
+    <div id="query">
+      <h4>Query Type</h4>
+      General Enquiry
+      Support Request
+      Please select a query type
+    </div>
 
-  Message
-  This field is required
+    <h4>Message</h4>
+    This field is required
 
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
+    I consent to being contacted by the team
+    To submit this form, please consent to being contacted
+  
 
-  Submit
+  <button type="submit" id="submitButton">Submit</button>
+  
+  </form>
 
     <div id="toast" popover="manual" role="status">
         <p class="toast-title">Message Sent!</p>
@@ -52,5 +61,7 @@
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
         Coded by <a href="#">Your Name Here</a>.
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

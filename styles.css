@@ -4,20 +4,55 @@
     --red: hsl(0, 66%, 54%);
 }
 
+html{
+    background-color: #E0F1E7;
+}
+
+h1 {
+    color: #384C4B;
+}
+
+h4 {
+    color:#777F7F;
+}
+
 body {
-    font-family: [Karla](https://fonts.google.com/specimen/Karla)
+    font-family: 'Karla', sans-serif;
+    background-color: #FFFFFF;
+}
+
+button {
+    background-color: #0C7D69;
+    color: #FFFFFF;
+    border: none;
 }
 
 #toast{
     position: fixed;
-    /* inset: 1.5rem auto auto auto; */
+    inset: auto 1.5;
     top: 2rem;
   
-    margin: 0;
+    /*margin: 0 auto;*/
     padding: 0.75rem 1.25rem;
     border: none;
-    background-color: green;
+    background-color: var(--green600);
     color: white;
 
+    opacity: 0;
+    /*transition: opacity 2s ease-in,
+                display 1s ease-in allow-discrete;*/
+    transition: all 1s allow-discrete;
+    transform: translateY(2rem);
+}
 
+#toast:popover-open {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@starting-style {
+    #toast:popover-open {
+        opacity: 0;
+        transform: translateY(2rem);
+    }
 }

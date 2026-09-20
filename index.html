@@ -6,7 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
-  <link rel="stylesheet" href="styles.css"
+  <link rel="stylesheet" href="styles.css">
   
   <title>Frontend Mentor | Contact form</title>
 
@@ -18,34 +18,66 @@
 </head>
 <body>
 
-  <h1>Contact Us</h1>
+  <h1>Contact Us <span class="required">*</span></h1>
 
-  <form>
+  <form id = "contact-form">
     
     <div id="name">
-      <h4>First Name</h4>
-      This field is required
+      <div class="field">
+        <h4>First Name <span class="required">*</span></h4>
+        <input id="first-name" type="text" class="input" required>
+        <span id="first-name-error" class="error">
+          This field is required
+        </span>
+      </div>
 
-      <h4>Last Name</h4>
-      This field is required
+      <div class="field">
+        <h4>Last Name <span class="required">*</span></h4>
+        <input id="last-name" type="text" class="input" required>
+        <span id="last-name-error" class="error">
+          This field is required
+        </span>
+      </div>
+
     </div>
 
-    <h4>Email Address</h4>
-    Please enter a valid email address
-    This field is required
+    <div>
+      <h4>Email Address <span class="required">*</span></h4>
+      <input id="email" type="email" class="input" required>
+      <span id="email-error" class="error">
+        Please enter a valid email address
+      </span>
+    </div>
 
     <div id="query">
-      <h4>Query Type</h4>
-      General Enquiry
-      Support Request
-      Please select a query type
+      <h4>Query Type <span class="required">*</span></h4>
+      
+      <label class="query-option">
+        <input class="input" type="radio" name="query-type">
+        General Enquiry
+      </label>
+      
+      <label class="query-option">
+      <input class="input" type="radio" name="query-type">Support Request
+      </label>
+      
+      <span id="query-error" class="error">
+        Please select a query type
+      </span>
     </div>
 
-    <h4>Message</h4>
-    This field is required
+    <div>
+      <h4>Message <span class="required">*</span></h4>
+      <textarea id="message" class="input"></textarea> 
+      <span id="message-error" class="error">field is required</span>
+    </div>
 
-    I consent to being contacted by the team
-    To submit this form, please consent to being contacted
+    <div id="consent">
+      <input type="checkbox" required> I consent to being contacted by the team
+      <span id="consent-error" class="error">
+        To submit this form, please consent to being contacted
+      </span>
+    </div>
   
 
   <button type="submit" id="submitButton">Submit</button>
@@ -59,7 +91,7 @@
   
     <footer class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-        Coded by <a href="#">Your Name Here</a>.
+        Coded by <a href="#">Garret Moore</a>.
     </footer>
 
     <script src="script.js"></script>
